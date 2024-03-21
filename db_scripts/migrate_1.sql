@@ -2,7 +2,7 @@
 ALTER TABLE singer RENAME TO musician;
 ALTER TABLE musician CHANGE singerName musicianName varchar(50);
 
-CREATE TABLE IF NOT EXISTS band (bandName varchar(50), creation YEAR, genre varchar(50));
+CREATE TABLE IF NOT EXISTS band (bandName varchar(50), creation YEAR, genre varchar(50), PRIMARY KEY (bandName));
 INSERT INTO band VALUES ("Crazy Duo", 2015, "Rock"), ("Luna", 2009, "classical"), ("Mysterio", 2019, "pop");
 
 ALTER TABLE musician ADD COLUMN role varchar(50);
